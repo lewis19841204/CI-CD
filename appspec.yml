@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-west-2:272290015767:task-definition/lewis_codebuild_20201125:1"
+        LoadBalancerInfo:
+          ContainerName: "lewis_codebuild_container"
+          ContainerPort: 80
